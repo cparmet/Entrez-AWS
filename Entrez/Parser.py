@@ -1,3 +1,7 @@
+## ChadP modification -- see code marked "ENTREZ-AWS" below
+## From Biopython fork 1/25/18
+
+
 # Copyright 2008-2014 by Michiel de Hoon.  All rights reserved.
 # Revisions copyright 2008-2015 by Peter Cock. All rights reserved.
 # This code is part of the Biopython distribution and governed by its
