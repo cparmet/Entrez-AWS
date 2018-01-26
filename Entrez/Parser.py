@@ -169,12 +169,18 @@ class ValidationError(ValueError):
 class DataHandler(object):
 
     import platform
-    if platform.system() == 'Windows':
-        directory = os.path.join(os.getenv("APPDATA"), "biopython")
-    else:  # Unix/Linux/Mac
-        home = os.path.expanduser('~')
-        directory = os.path.join(home, '.config', 'biopython')
-        del home
+
+    ## NEW CODE FROM ENTREZ-AWS - ChadP 1/25/18
+    directory = '/tmp/'
+
+    ## REPLACES CODE
+    # if platform.system() == 'Windows':
+    #     directory = os.path.join(os.getenv("APPDATA"), "biopython")
+    # else:  # Unix/Linux/Mac
+    #     home = os.path.expanduser('~')
+    #     directory = os.path.join(home, '.config', 'biopython')
+    #     del home
+
     local_dtd_dir = os.path.join(directory, 'Bio', 'Entrez', 'DTDs')
     local_xsd_dir = os.path.join(directory, 'Bio', 'Entrez', 'XSDs')
     del directory
